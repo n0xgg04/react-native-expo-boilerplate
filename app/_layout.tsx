@@ -6,7 +6,7 @@ import 'react-native-gesture-handler';
 import { RecoilRoot } from 'recoil';
 import TanStackQueryProvider from '@/shared/provider/TanStackQueryProvider';
 import * as Sentry from '@sentry/react-native';
-import { SentryInit } from '@/shared/features/Sentry';
+import { SentryInit } from '@/shared/features/sentry';
 import AppThemeProvider from '@/shared/provider/ThemeProvider';
 import useLoadFontFamily from '@/shared/hooks/useLoadFontFamily';
 

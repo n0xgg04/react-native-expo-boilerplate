@@ -6,8 +6,8 @@
     "start": "expo start",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "run:android": "expo run:android",
-    "run:ios": "expo run:ios",
+    "dev:android": "expo run:android",
+    "dev:ios": "expo run:ios",
     "prisma:generate": "npx prisma@latest generate",
     "prisma:migrate": "npx prisma@latest migrate dev"
   },
@@ -43,7 +43,8 @@
     "react-native-safe-area-context": "4.10.5",
     "react-native-screens": "3.31.1",
     "react-native-web": "~0.19.10",
-    "recoil": "^0.7.7"
+    "recoil": "^0.7.7",
+    "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
