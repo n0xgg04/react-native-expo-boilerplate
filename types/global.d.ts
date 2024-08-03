@@ -1,5 +1,8 @@
+import { DefaultTheme } from '@react-navigation/native';
+
 declare global {
-  type AppThemeT = {};
+  type DefaultThemeT = typeof DefaultTheme;
+  type AppThemeT = {} & DefaultThemeT;
 }
 
 declare module '@react-navigation/native' {
