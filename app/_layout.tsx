@@ -1,37 +1,39 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import React from 'react';
 import 'react-native-reanimated';
+import 'react-native-gesture-handler';
+import { RecoilRoot } from 'recoil';
+import TanStackQueryProvider from '@/shared/provider/TanStackQueryProvider';
+import * as Sentry from '@sentry/react-native';
+import { SentryInit } from '@/shared/features/Sentry';
+import AppThemeProvider from '@/shared/provider/ThemeProvider';
+import useLoadFontFamily from '@/shared/hooks/useLoadFontFamily';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+(async () => SplashScreen.preventAutoHideAsync())();
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+SentryInit();
+function RootLayout() {
+  const { isLoading } = useLoadFontFamily();
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  React.useEffect(() => {
+    if (!isLoading) (async () => SplashScreen.hideAsync())();
+  }, [isLoading]);
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
+  if (isLoading) return null;
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <RecoilRoot>
+      <TanStackQueryProvider>
+        <AppThemeProvider>
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="+not-found" />
+          </Stack>
+        </AppThemeProvider>
+      </TanStackQueryProvider>
+    </RecoilRoot>
   );
 }
+
+export default Sentry.wrap(RootLayout);

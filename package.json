@@ -4,19 +4,23 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "run:android": "expo run:android",
+    "run:ios": "expo run:ios",
+    "prisma:generate": "npx prisma@latest generate",
+    "prisma:migrate": "npx prisma@latest migrate dev"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
+    "@prisma/client": "^5.17.0",
+    "@prisma/react-native": "^5.17.0",
     "@react-navigation/native": "^6.0.2",
+    "@sentry/react-native": "~5.22.0",
+    "@tanstack/react-query": "^5.51.21",
     "expo": "~51.0.24",
     "expo-constants": "~16.0.2",
     "expo-font": "~12.0.9",
@@ -26,20 +30,28 @@
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
     "expo-web-browser": "~13.0.3",
+    "moti": "^0.29.0",
+    "prettier": "^3.3.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
     "react-native-gesture-handler": "~2.16.1",
+    "react-native-quick-base64": "^2.1.2",
     "react-native-reanimated": "~3.10.1",
     "react-native-safe-area-context": "4.10.5",
     "react-native-screens": "3.31.1",
-    "react-native-web": "~0.19.10"
+    "react-native-web": "~0.19.10",
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
     "@types/react-test-renderer": "^18.0.7",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "^7.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "jest": "^29.2.1",
     "jest-expo": "~51.0.3",
     "react-test-renderer": "18.2.0",
