@@ -43,6 +43,10 @@ yarn run prisma:migrate
 ```bash
 yarn run prisma:generate 
 ```
+- Prebuild native app:
+```bash
+npx expo prebuild --clean
+```
 
 
 ### Folder structure:
