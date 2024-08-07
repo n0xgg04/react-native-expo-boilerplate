@@ -37,6 +37,17 @@
           "organization": "sentry org slug, or use the `SENTRY_ORG` environment variable",
           "project": "sentry project name, or use the `SENTRY_PROJECT` environment variable"
         }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": true
+          },
+          "android": {
+            "newArchEnabled": true
+          }
+        }
       ]
     ],
     "experiments": {
@@ -50,6 +61,10 @@
         "projectId": "f23475ac-3cca-4d4a-bc18-0dd86f5dede9"
       }
     },
-    "owner": "n0xgg04"
+    "owner": "n0xgg04",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/f23475ac-3cca-4d4a-bc18-0dd86f5dede9"
+    }
   }
 }

@@ -1,5 +1,13 @@
 import * as React from 'react';
+import { Text } from 'moti';
 
-export default function Typography() {
-  return <div></div>;
+type Props = {
+  variants: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle' | 'text';
+};
+
+export default function Typography({
+  variants,
+  ...props
+}: Props & React.ComponentProps<typeof Text>) {
+  return <Text {...props}></Text>;
 }
