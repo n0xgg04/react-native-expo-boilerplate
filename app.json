@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.noxinfinity.liqi.news.v2"
+      "bundleIdentifier": "com.noxinfinity.liqi.news"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.noxinfinity.liqi.news.v2"
+      "package": "com.noxinfinity.liqi.news"
     },
     "web": {
       "bundler": "metro",

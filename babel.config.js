@@ -3,8 +3,12 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      'nativewind/babel',
-      'babel-plugin-react-compiler',
+      [
+        'babel-plugin-react-compiler',
+        {
+          runtimeModule: 'react-compiler-runtime',
+        },
+      ],
       [
         'react-native-platform-specific-extensions',
         {

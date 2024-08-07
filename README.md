@@ -6,6 +6,7 @@ Author: [n0xgg04](https://github.com/n0xgg04)
 - React Compiler 
 - React Native New Architecture
 - EAS
+- React 18.3.1
 
 
 - NativeWind (Support tailwind css for React Native)
