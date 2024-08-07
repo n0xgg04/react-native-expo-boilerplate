@@ -8,7 +8,6 @@ Author: [n0xgg04](https://github.com/n0xgg04)
 - EAS
 - React 18.3.1
 
-
 - NativeWind (Support tailwind css for React Native)
 - Prisma + SQLite: Local storage 
 - Recoil: Simple global state manager
@@ -64,9 +63,6 @@ npx expo prebuild --clean
          |- fonts: Font family
          |- images: Static images like .png, .jpg
          |- lotties : JSON lottie for animation 
-|- components : Global components (use for all screen in app)
-         |- base : Base component like Typography, Container, Stack,...
-         |- ui : Global component like NavBar, LoginCard...etc 
 |- prisma : Prisma folder
          |- migrations : Prisma migration files
          |- app.db : Sqlite database file
@@ -76,6 +72,9 @@ npx expo prebuild --clean
                      |- font-scale: Constants font scale for responsive
                      |- spacing : Same as font scale, but use for space properties
                      |- themes : Define app colors schema
+         |- components : Global components (use for all screen in app)
+                     |- base : Base component like Typography, Container, Stack,...
+                     |- ui : Global component like NavBar, LoginCard...etc 
 |- features: 
          |- prisma.ts : Prisma client
          |- sentry.ts : Sentry 

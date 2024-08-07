@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "liqi-news-20-",
-    "slug": "liqi-news-20-",
+    "name": "liqi-news",
+    "slug": "liqi-news",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
