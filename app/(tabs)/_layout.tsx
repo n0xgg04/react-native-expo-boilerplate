@@ -21,12 +21,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="state"
-        options={{
-          title: 'State',
-        }}
-      />
-      <Tabs.Screen
         name="api"
         options={{
           title: 'API Request',

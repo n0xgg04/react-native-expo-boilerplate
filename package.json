@@ -3,8 +3,7 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "expo:start": "expo start",
-    "test": "jest --watchAll",
+    "expo:start": "expo start --clear",
     "expo:lint": "expo lint",
     "expo:prebuild": "npx expo prebuild --clean",
     "expo:run:ios": "npx expo run:ios",
@@ -18,9 +17,15 @@
     "eas:login": "eas login",
     "eas:logout": "eas logout",
     "eas:config": "eas build:configure",
-    "eas:build:ios:dev:simulator": "eas build --platform android --profile ios-simulator",
+    "eas:build:ios:dev:simulator": "eas build --platform ios --profile ios-simulator",
+    "eas:build:ios:dev:simulator:local": "eas build --platform ios --profile ios-simulator --local",
     "eas:build:ios:dev": "eas build --platform ios --profile development",
-    "eas:build:android:dev": "eas build --platform android --profile development"
+    "eas:build:android:dev": "eas build --platform android --profile development",
+    "eas:build:android:dev:local": "eas build --platform android --profile development --local",
+    "eas:submit:android": "eas submit -p android",
+    "eas:submit:ios": "eas submit -p ios",
+    "eas:submit:all": "eas submit -p all",
+    "expo:doctor": "npx expo:doctor"
   },
   "jest": {
     "preset": "jest-expo"
@@ -38,7 +43,9 @@
     "expo": "~51.0.24",
     "expo-build-properties": "~0.12.4",
     "expo-constants": "~16.0.2",
+    "expo-dev-client": "~4.0.21",
     "expo-font": "~12.0.9",
+    "expo-insights": "~0.7.0",
     "expo-linking": "~6.3.1",
     "expo-router": "~3.5.20",
     "expo-splash-screen": "~0.27.5",
@@ -67,6 +74,7 @@
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
     "@types/react-test-renderer": "^18.0.7",
+    "babel-plugin-react-native-platform-specific-extensions": "^1.1.1",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.0.0",
     "eslint-config-prettier": "^9.1.0",

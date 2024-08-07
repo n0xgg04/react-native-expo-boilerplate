@@ -3,6 +3,11 @@ Author: [n0xgg04](https://github.com/n0xgg04)
 
 ### Using
 
+- React Compiler 
+- React Native New Architecture
+- EAS
+
+
 - NativeWind (Support tailwind css for React Native)
 - Prisma + SQLite: Local storage 
 - Recoil: Simple global state manager
