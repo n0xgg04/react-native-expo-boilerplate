@@ -38,5 +38,4 @@ build-*.apk
 # typescript
 *.tsbuildinfo
 
-expo-env.d.ts
 # @end expo-cli

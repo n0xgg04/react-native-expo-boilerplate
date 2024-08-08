@@ -1,5 +1,4 @@
-import { Stack, useNavigationContainerRef } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
+import { Stack } from 'expo-router';
 import React from 'react';
 import 'react-native-reanimated';
 import 'react-native-gesture-handler';
@@ -7,23 +6,10 @@ import { RecoilRoot } from 'recoil';
 import TanStackQueryProvider from '@/shared/provider/TanStackQueryProvider';
 import * as Sentry from '@sentry/react-native';
 import AppThemeProvider from '@/shared/provider/ThemeProvider';
-import useLoadFontFamily from '@/shared/hooks/useLoadFontFamily';
-import { SentryInit } from '@/shared/features/sentry';
-import useSentryForRoot from '@/shared/hooks/useSentryForRoot';
-
-(async () => SplashScreen.preventAutoHideAsync())();
-
-const routingInstrumentation = new Sentry.ReactNavigationInstrumentation();
-SentryInit(routingInstrumentation);
+import useLoadingPackages from '@/shared/hooks/useLoadingPackages';
 
 function RootLayout() {
-  const { isLoading } = useLoadFontFamily();
-  useSentryForRoot(routingInstrumentation);
-
-  React.useEffect(() => {
-    if (!isLoading) (async () => SplashScreen.hideAsync())();
-  }, [isLoading]);
-
+  const { isLoading } = useLoadingPackages();
   if (isLoading) return null;
 
   return (

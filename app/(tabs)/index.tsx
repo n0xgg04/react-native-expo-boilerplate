@@ -2,8 +2,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link } from 'expo-router';
 import Stack from '@/shared/components/base/Stack';
 import Typography from '@/shared/components/base/Typography';
-import { twMerge } from 'tailwind-merge';
-import FontSize from '@/shared/constants/font-scale';
 
 export default function HomeScreen() {
   return (

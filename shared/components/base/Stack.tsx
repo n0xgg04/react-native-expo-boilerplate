@@ -21,7 +21,7 @@ type StackVariants = VariantProps<typeof v>;
 type Props = React.ComponentProps<typeof View> &
   React.PropsWithChildren &
   StackVariants & {
-    gap: number;
+    gap?: number;
   };
 
 export default function Stack({

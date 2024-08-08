@@ -1,5 +1,5 @@
 {
-  "name": "liqi-news-20-",
+  "name": "@n0xgg04/react-native-expo",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -15,6 +15,7 @@
     "dev:ios": "expo run:ios",
     "prisma:generate": "npx prisma@latest generate",
     "prisma:migrate": "npx prisma@latest migrate dev",
+    "prisma:studio": "npx prisma@latest studio",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "eas:login": "eas login",
@@ -34,8 +35,9 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
-    "@prisma/client": "^5.18.0",
-    "@prisma/react-native": "^5.18.0",
+    "@gorhom/bottom-sheet": "^4.6.4",
+    "@prisma/client": "5.16.1",
+    "@prisma/react-native": "5.16.1",
     "@react-navigation/native": "^6.0.2",
     "@sentry/react-native": "~5.22.0",
     "@shopify/flash-list": "1.6.4",
@@ -83,7 +85,7 @@
     "@babel/preset-typescript": "^7.24.7",
     "@tanstack/eslint-plugin-query": "^5.51.15",
     "@types/jest": "^29.5.12",
-    "@types/react": "~18.2.45",
+    "@types/react": "rc",
     "@types/react-test-renderer": "^18.0.7",
     "babel-plugin-react-native-platform-specific-extensions": "^1.1.1",
     "eslint": "^8.57.0",
@@ -96,5 +98,8 @@
     "tailwindcss": "3.3.2",
     "typescript": "~5.3.3"
   },
-  "private": true
+  "private": true,
+  "trustedDependencies": [
+    "@sentry/cli"
+  ]
 }
