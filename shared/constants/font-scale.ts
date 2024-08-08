@@ -1,6 +1,6 @@
 import { height, maxWidth, scaleFontSize, width } from '@/shared/utils/scale';
 
-export const FontSize = {
+const FontSize = {
   width,
   height,
   maxWidth,
@@ -367,3 +367,5 @@ export const FontSize = {
   FONT_SIZE_360: scaleFontSize(360),
   FONT_SIZE_361: scaleFontSize(361),
 };
+
+export default FontSize;

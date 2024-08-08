@@ -41,6 +41,7 @@
     "@shopify/react-native-skia": "1.2.3",
     "@tanstack/react-query": "^5.51.21",
     "babel-plugin-react-compiler": "^0.0.0-experimental-334f00b-20240725",
+    "clsx": "^2.1.1",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-9ed098e-20240725",
     "expo": "~51.0.24",
     "expo-build-properties": "~0.12.4",
@@ -70,6 +71,7 @@
     "react-native-svg": "15.2.0",
     "react-native-web": "~0.19.10",
     "recoil": "^0.7.7",
+    "tailwind-merge": "^2.4.0",
     "tailwind-variants": "^0.2.1"
   },
   "devDependencies": {
