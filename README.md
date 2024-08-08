@@ -17,7 +17,7 @@ Author: [n0xgg04](https://github.com/n0xgg04)
 
 
 ### Installation
-#### Install packages:
+#### 1. Install packages:
 - Use npm
 ```bash
 npm install 
@@ -27,10 +27,16 @@ npm install
 ```bash
 yarn install 
 ```
-#### Scripts:
+
+#### 2. Prebuild
+```bash
+yarn run expo:prebuild
+```
+
+#### 3. Scripts:
 - Run expo app:
 ```bash
-yarn start
+yarn run expo:start
 ```
 - Run iOS in dev mode:
 ```bash

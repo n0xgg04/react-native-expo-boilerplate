@@ -3,11 +3,14 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
+    "start": "expo start",
+    "expo:start:dev": "expo start --dev-client",
     "expo:start": "expo start --clear",
     "expo:lint": "expo lint",
     "expo:prebuild": "npx expo prebuild --clean",
     "expo:run:ios": "npx expo run:ios",
     "expo:run:android": "npx expo run:android",
+    "expo:doctor": "npx expo-doctor",
     "dev:android": "expo run:android",
     "dev:ios": "expo run:ios",
     "prisma:generate": "npx prisma@latest generate",
@@ -18,15 +21,13 @@
     "eas:logout": "eas logout",
     "eas:config": "eas build:configure",
     "eas:build:ios:dev:simulator": "eas build --platform ios --profile ios-simulator",
-    "eas:build:ios:dev:simulator:local": "eas build --platform ios --profile ios-simulator --local",
+    "eas:build:ios:dev:simulator:local": "eas build --platform ios --profile ios-simulator --local --output ./build/ios/",
     "eas:build:ios:dev": "eas build --platform ios --profile development",
     "eas:build:android:dev": "eas build --platform android --profile development",
-    "eas:build:android:dev:local": "eas build --platform android --profile development --local",
+    "eas:build:android:dev:local": "eas build --platform android --profile development --local --output ./build/android/",
     "eas:submit:android": "eas submit -p android",
     "eas:submit:ios": "eas submit -p ios",
-    "eas:submit:all": "eas submit -p all",
-    "expo:doctor": "npx expo-doctor",
-    "start": "expo start --dev-client"
+    "eas:submit:all": "eas submit -p all"
   },
   "jest": {
     "preset": "jest-expo"
@@ -57,9 +58,9 @@
     "moti": "^0.29.0",
     "nativewind": "^2.0.11",
     "prettier": "^3.3.3",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-compiler-runtime": "file:./lib/react-compiler-runtime",
-    "react-dom": "18.2.0",
+    "react-dom": "18.3.1",
     "react-native": "0.74.3",
     "react-native-gesture-handler": "~2.16.1",
     "react-native-quick-base64": "^2.1.2",
@@ -73,6 +74,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@tanstack/eslint-plugin-query": "^5.51.15",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
     "@types/react-test-renderer": "^18.0.7",

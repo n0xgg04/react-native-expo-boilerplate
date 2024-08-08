@@ -9,12 +9,6 @@ module.exports = function (api) {
           runtimeModule: 'react-compiler-runtime',
         },
       ],
-      [
-        'react-native-platform-specific-extensions',
-        {
-          extensions: ['css', 'scss', 'sass'],
-        },
-      ],
     ],
   };
 };
