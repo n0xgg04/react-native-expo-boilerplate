@@ -1,17 +1,22 @@
-import { selector, useRecoilValue } from 'recoil';
-import { AuthencationState } from '@/states/recoil/atoms/Authencation.atom';
+import { prisma } from '@/shared/instants/prisma';
 
-const authencationGuardState = selector({
-  key: 'AuthencationGuards',
-  get: ({ get }) => {
-    const authencationState = get(AuthencationState);
-    return {
-      isLoggedIn: authencationState.isLoggedIn,
-      data: authencationState.userData,
-    };
-  },
-});
+export function useAuthData() {
+  return prisma.authencation.useFindFirst({
+    where: {
+      id: 1,
+    },
+  });
+}
 
-export default function useAuthencationGuard() {
-  return useRecoilValue(authencationGuardState);
+export async function updateAuthData(userData: { username: string; id: number }) {
+  const user = await prisma.authencation.findFirst({
+    where: {
+      id: 1,
+    },
+  });
+  if (user) await prisma.authencation.update({});
+  else
+    await prisma.authencation.create({
+      data: userData,
+    });
 }

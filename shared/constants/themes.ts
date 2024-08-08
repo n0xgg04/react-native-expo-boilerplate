@@ -16,4 +16,5 @@ const DarkTheme: AppThemeT = {
   },
 };
 
+export default { LightTheme, DarkTheme };
 export { LightTheme, DarkTheme };

@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
-    "@prisma/client": "^5.17.0",
-    "@prisma/react-native": "^5.17.0",
+    "@prisma/client": "^5.18.0",
+    "@prisma/react-native": "^5.18.0",
     "@react-navigation/native": "^6.0.2",
     "@sentry/react-native": "~5.22.0",
     "@shopify/react-native-skia": "1.2.3",
@@ -74,6 +74,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@tanstack/eslint-plugin-query": "^5.51.15",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
