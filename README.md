@@ -99,7 +99,7 @@ npx expo prebuild --clean
 |- babel.config.js : Babel config
 |- .eslintrc.js : Config esline
 |- metro.config.js : Metro config
-|- tailwind.config.js : TailwindCSS config
+|- tailwind.config.ts : TailwindCSS config
 |- .prettierrc.json : Config prettier
 |- app.json : Expo app config
 |- package.json : NodeJS app package config
