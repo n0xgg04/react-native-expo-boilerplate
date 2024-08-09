@@ -42,7 +42,7 @@ const FONT_SIZE = {
   xs: FontSize.FONT_SIZE_12,
 };
 
-export default function Typography({
+export function Typography({
   variant = 'content',
   weight,
   className,

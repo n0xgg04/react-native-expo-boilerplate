@@ -1,6 +1,6 @@
 import { height, maxWidth, scaleSize, width } from '@/shared/utils/scale';
 
-export const Dimension = {
+export const Spacing = {
   width,
   height,
   maxWidth,

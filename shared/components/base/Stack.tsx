@@ -24,14 +24,7 @@ type Props = React.ComponentProps<typeof View> &
     gap?: number;
   };
 
-export default function Stack({
-  direction = 'row',
-  children,
-  className,
-  gap,
-  style,
-  ...props
-}: Props) {
+export function Stack({ direction = 'row', children, className, gap, style, ...props }: Props) {
   return (
     <View
       className={cn(

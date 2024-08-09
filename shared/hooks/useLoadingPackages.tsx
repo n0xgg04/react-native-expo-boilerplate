@@ -1,22 +1,14 @@
-import useLoadFontFamily from '@/shared/hooks/useLoadFontFamily';
-import useSentryForRoot from '@/shared/hooks/useSentryForRoot';
+import { useLoadFontFamily, useSentryForRoot } from '@/shared/hooks';
 import { routingInstrumentation } from '@/shared/instants';
 import React from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { SentryInit } from '@/shared/features/sentry';
-import useInitializePrisma from '@/shared/hooks/useInitializePrisma';
 
 SentryInit(routingInstrumentation);
 (async () => SplashScreen.preventAutoHideAsync())();
 
-export default function useLoadingPackages() {
+export function useLoadingPackages() {
   const { isLoading } = useLoadFontFamily();
-  //const { isInitialized } = useInitializePrisma();
-
-  // const isLoading = React.useMemo(
-  //   () => !isLoadingFont && isInitialized,
-  //   [isInitialized, isLoadingFont]
-  // );
 
   useSentryForRoot(routingInstrumentation);
 

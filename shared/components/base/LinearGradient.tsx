@@ -16,7 +16,7 @@ type Props = {
   colors: string[];
 } & RectProps;
 
-export default function LinearGradient({
+export function LinearGradient({
   start = vec(0, 0),
   end = vec(256, 256),
   canvasStyle,

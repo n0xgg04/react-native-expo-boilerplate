@@ -17,7 +17,7 @@ type Props = {
   colors: string[];
 } & RectProps;
 
-export default function RadialGradient({
+export function RadialGradient({
   r = 128,
   c = vec(128, 128),
   canvasStyle = {

@@ -1,7 +1,6 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link } from 'expo-router';
-import Stack from '@/shared/components/base/Stack';
-import Typography from '@/shared/components/base/Typography';
+import { Card, Typography, Stack, Button } from '@/shared/components/base';
 
 export default function HomeScreen() {
   return (
@@ -14,6 +13,15 @@ export default function HomeScreen() {
       <Link href="/info" className="p-2 bg-gray-200 mt-2 rounded-full overflow-hidden">
         Redirect to info page!
       </Link>
+      <Card>
+        <Card.CardHeader>
+          <Typography>Test</Typography>
+        </Card.CardHeader>
+        <Card.CardFooter direction="column">
+          <Typography>HI</Typography>
+          <Button>Click here</Button>
+        </Card.CardFooter>
+      </Card>
     </SafeAreaView>
   );
 }

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { LightTheme } from '@/shared/constants/themes';
-import { ThemeProvider } from '@react-navigation/native';
+import { darkTheme, lightTheme } from '@/shared/constants/themes';
 import { useColorScheme } from '@/shared/hooks/useColorSchema';
+import { ThemeProvider } from '@shopify/restyle';
 
-export default function AppThemeProvider({ children }: React.PropsWithChildren) {
+export function AppThemeProvider({ children }: React.PropsWithChildren) {
   const { colorScheme } = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? LightTheme : LightTheme}>
+    <ThemeProvider theme={colorScheme === 'dark' ? darkTheme : lightTheme}>
       {children}
     </ThemeProvider>
   );
