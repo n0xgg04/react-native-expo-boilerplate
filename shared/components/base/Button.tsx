@@ -9,6 +9,7 @@ import { useTheme } from '@/shared/hooks';
 
 type Props = {
   children: string;
+  labelStyle?: React.ComponentProps<typeof Typography>['style'];
 };
 
 const v = tv({
@@ -26,15 +27,16 @@ export function Button({
   variant = 'filled',
   className,
   style,
+  labelStyle,
   ...props
-}: Props & TouchableOpacityProps & TwProps) {
+}: TouchableOpacityProps & TwProps & Props) {
   const { colors } = useTheme();
   return (
     <TouchableOpacity
       style={[
         {
           backgroundColor: colors.buttonBackground,
-          padding: Spacing.SPACING_4,
+          padding: Spacing.SPACING_10,
           borderRadius: Spacing.SPACING_5,
         },
         style,
@@ -42,7 +44,16 @@ export function Button({
       className={cn(v({ variant }), className)}
       {...props}
     >
-      <Typography>{children}</Typography>
+      <Typography
+        style={[
+          {
+            color: colors.textButtonFilled,
+          },
+          labelStyle,
+        ]}
+      >
+        {children}
+      </Typography>
     </TouchableOpacity>
   );
 }

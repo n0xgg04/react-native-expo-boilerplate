@@ -7,6 +7,7 @@ Author: [n0xgg04](https://github.com/n0xgg04)
 - React Native New Architecture
 - EAS
 - React 18.3.1
+- Firebase
 
 - NativeWind (Support tailwind css for React Native)
 - Prisma + SQLite: Local storage 
@@ -81,16 +82,17 @@ npx expo prebuild --clean
          |- components : Global components (use for all screen in app)
                      |- base : Base component like Typography, Container, Stack,...
                      |- ui : Global component like NavBar, LoginCard...etc 
-|- features: 
-         |- prisma.ts : Prisma client
-         |- sentry.ts : Sentry 
-|- hooks: Shared hooks
-         |- useLoadFonyFamily : Define your font family here
-|- provider : App provider
-         |- TanStackQueryProvider : Tanstack context
-         |- ThemeProvider : Theme context
-|- utils 
-         |- scale: Functions related to support responsive
+         |- secret: Google Service Json, Google Plist
+         |- features: 
+                     |- prisma.ts : Prisma client
+                     |- sentry.ts : Sentry 
+         |- hooks: Shared hooks
+                     |- useLoadFonyFamily : Define your font family here
+         |- provider : App provider
+                     |- TanStackQueryProvider : Tanstack context
+                     |- ThemeProvider : Theme context
+         |- utils 
+                     |- scale: Functions related to support responsive
 |- states
          |- recoil : Define global state here
 |- types : TypeScript type declare or override types here

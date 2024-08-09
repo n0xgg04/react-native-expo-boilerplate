@@ -10,6 +10,8 @@ npm-debug.*
 *.orig.*
 web-build/
 .env
+shared/secret/*.json
+shared/secret/*.plist
 
 # macOS
 .DS_Store

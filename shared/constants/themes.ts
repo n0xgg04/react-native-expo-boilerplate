@@ -20,6 +20,8 @@ const lightTheme = createTheme({
     mainBackground: palette.white,
     cardPrimaryBackground: palette.purplePrimary,
     buttonBackground: palette.greenLight,
+    textPrimary: palette.purplePrimary,
+    textButtonFilled: palette.black,
   },
   spacing: {
     s: Spacing.SPACING_5,
