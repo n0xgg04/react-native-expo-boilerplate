@@ -3,7 +3,7 @@ import { ExpoConfig, ConfigContext } from 'expo/config';
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: 'liqi-news',
-  slug: 'liqi-news',
+  slug: 'liqi-news-20-',
   version: '1.0.0',
   orientation: 'portrait',
   icon: './assets/images/icon.png',
@@ -18,6 +18,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     supportsTablet: true,
     bundleIdentifier: 'com.noxinfinity.liqi.news',
     googleServicesFile: './shared/secret/GoogleService-Info.plist',
+    entitlements: {
+      'aps-environment': 'production',
+    },
   },
   android: {
     adaptiveIcon: {
@@ -36,8 +39,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     'expo-router',
     '@prisma/react-native',
     '@react-native-firebase/app',
-    '@react-native-firebase/auth',
-    '@react-native-firebase/crashlytics',
     [
       '@sentry/react-native/expo',
       {
