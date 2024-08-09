@@ -67,6 +67,7 @@
     "expo-system-ui": "~3.0.7",
     "expo-updates": "~0.25.21",
     "expo-web-browser": "~13.0.3",
+    "lottie-react-native": "6.7.0",
     "moti": "^0.29.0",
     "nativewind": "^2.0.11",
     "prettier": "^3.3.3",
