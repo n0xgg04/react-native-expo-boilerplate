@@ -3,7 +3,7 @@ import { ExpoConfig, ConfigContext } from 'expo/config';
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: 'liqi-news',
-  slug: 'liqi-news-20-',
+  slug: 'liqi-news',
   version: '1.0.0',
   orientation: 'portrait',
   icon: './assets/images/icon.png',
@@ -17,7 +17,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ios: {
     supportsTablet: true,
     bundleIdentifier: 'com.noxinfinity.liqi.news',
-    googleServicesFile: './shared/secret/GoogleService-Info.plist',
+    // googleServicesFile: './shared/secret/GoogleService-Info.plist',
     entitlements: {
       'aps-environment': 'production',
     },
@@ -28,7 +28,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: '#ffffff',
     },
     package: 'com.noxinfinity.liqi.news',
-    googleServicesFile: './shared/secret/google-services.json',
+    // googleServicesFile: './shared/secret/google-services.json',
   },
   web: {
     bundler: 'metro',
