@@ -17,7 +17,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ios: {
     supportsTablet: true,
     bundleIdentifier: 'com.noxinfinity.liqi.news',
-    // googleServicesFile: './shared/secret/GoogleService-Info.plist',
+    googleServicesFile: process.env.GOOGLE_SERVICE_IOS,
     entitlements: {
       'aps-environment': 'production',
     },
@@ -28,7 +28,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: '#ffffff',
     },
     package: 'com.noxinfinity.liqi.news',
-    // googleServicesFile: './shared/secret/google-services.json',
+    googleServicesFile: process.env.GOOGLE_SERVICE_ANDROID,
   },
   web: {
     bundler: 'metro',
