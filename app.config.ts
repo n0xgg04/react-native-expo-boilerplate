@@ -67,10 +67,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       origin: false,
     },
     eas: {
-      projectId: 'f23475ac-3cca-4d4a-bc18-0dd86f5dede9',
+      projectId: '67649653-d0db-4abc-95f5-d70861ea5c19',
     },
   },
-  owner: 'n0xgg04',
+  owner: 'noxinfinity',
   runtimeVersion: '1.0.0',
   updates: {
     url: 'https://u.expo.dev/f23475ac-3cca-4d4a-bc18-0dd86f5dede9',
