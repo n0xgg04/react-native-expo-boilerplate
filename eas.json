@@ -1,0 +1,46 @@
+{
+  "cli": {
+    "version": ">= 10.2.2",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "bun": "1.0.7",
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+
+      }
+    },
+    "ios-simulator": {
+      "bun": "1.0.7",
+      "extends": "development",
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+
+      }
+    },
+    "preview": {
+      "bun": "1.0.7",
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+
+      }
+    },
+    "production": {
+      "bun": "1.0.7",
+      "channel": "production",
+      "autoIncrement": true,
+      "env": {
+
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
